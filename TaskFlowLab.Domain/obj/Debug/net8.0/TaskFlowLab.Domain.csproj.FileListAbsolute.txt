@@ -1,0 +1,11 @@
+C:\Users\long_\Desktop\Guia Claude Code\TaskFlowLab.Api\TaskFlowLab.Domain\bin\Debug\net8.0\TaskFlowLab.Domain.deps.json
+C:\Users\long_\Desktop\Guia Claude Code\TaskFlowLab.Api\TaskFlowLab.Domain\bin\Debug\net8.0\TaskFlowLab.Domain.dll
+C:\Users\long_\Desktop\Guia Claude Code\TaskFlowLab.Api\TaskFlowLab.Domain\bin\Debug\net8.0\TaskFlowLab.Domain.pdb
+C:\Users\long_\Desktop\Guia Claude Code\TaskFlowLab.Api\TaskFlowLab.Domain\obj\Debug\net8.0\TaskFlowLab.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\long_\Desktop\Guia Claude Code\TaskFlowLab.Api\TaskFlowLab.Domain\obj\Debug\net8.0\TaskFlowLab.Domain.AssemblyInfoInputs.cache
+C:\Users\long_\Desktop\Guia Claude Code\TaskFlowLab.Api\TaskFlowLab.Domain\obj\Debug\net8.0\TaskFlowLab.Domain.AssemblyInfo.cs
+C:\Users\long_\Desktop\Guia Claude Code\TaskFlowLab.Api\TaskFlowLab.Domain\obj\Debug\net8.0\TaskFlowLab.Domain.csproj.CoreCompileInputs.cache
+C:\Users\long_\Desktop\Guia Claude Code\TaskFlowLab.Api\TaskFlowLab.Domain\obj\Debug\net8.0\TaskFlowLab.Domain.dll
+C:\Users\long_\Desktop\Guia Claude Code\TaskFlowLab.Api\TaskFlowLab.Domain\obj\Debug\net8.0\refint\TaskFlowLab.Domain.dll
+C:\Users\long_\Desktop\Guia Claude Code\TaskFlowLab.Api\TaskFlowLab.Domain\obj\Debug\net8.0\TaskFlowLab.Domain.pdb
+C:\Users\long_\Desktop\Guia Claude Code\TaskFlowLab.Api\TaskFlowLab.Domain\obj\Debug\net8.0\ref\TaskFlowLab.Domain.dll

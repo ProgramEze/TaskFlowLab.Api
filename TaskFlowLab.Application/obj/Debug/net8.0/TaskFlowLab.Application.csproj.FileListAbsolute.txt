@@ -1,0 +1,15 @@
+C:\Users\long_\Desktop\Guia Claude Code\TaskFlowLab.Api\TaskFlowLab.Application\bin\Debug\net8.0\TaskFlowLab.Application.deps.json
+C:\Users\long_\Desktop\Guia Claude Code\TaskFlowLab.Api\TaskFlowLab.Application\bin\Debug\net8.0\TaskFlowLab.Application.dll
+C:\Users\long_\Desktop\Guia Claude Code\TaskFlowLab.Api\TaskFlowLab.Application\bin\Debug\net8.0\TaskFlowLab.Application.pdb
+C:\Users\long_\Desktop\Guia Claude Code\TaskFlowLab.Api\TaskFlowLab.Application\bin\Debug\net8.0\TaskFlowLab.Domain.dll
+C:\Users\long_\Desktop\Guia Claude Code\TaskFlowLab.Api\TaskFlowLab.Application\bin\Debug\net8.0\TaskFlowLab.Domain.pdb
+C:\Users\long_\Desktop\Guia Claude Code\TaskFlowLab.Api\TaskFlowLab.Application\obj\Debug\net8.0\TaskFlowLab.Application.csproj.AssemblyReference.cache
+C:\Users\long_\Desktop\Guia Claude Code\TaskFlowLab.Api\TaskFlowLab.Application\obj\Debug\net8.0\TaskFlowLab.Application.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\long_\Desktop\Guia Claude Code\TaskFlowLab.Api\TaskFlowLab.Application\obj\Debug\net8.0\TaskFlowLab.Application.AssemblyInfoInputs.cache
+C:\Users\long_\Desktop\Guia Claude Code\TaskFlowLab.Api\TaskFlowLab.Application\obj\Debug\net8.0\TaskFlowLab.Application.AssemblyInfo.cs
+C:\Users\long_\Desktop\Guia Claude Code\TaskFlowLab.Api\TaskFlowLab.Application\obj\Debug\net8.0\TaskFlowLab.Application.csproj.CoreCompileInputs.cache
+C:\Users\long_\Desktop\Guia Claude Code\TaskFlowLab.Api\TaskFlowLab.Application\obj\Debug\net8.0\TaskFlow.BECBC64C.Up2Date
+C:\Users\long_\Desktop\Guia Claude Code\TaskFlowLab.Api\TaskFlowLab.Application\obj\Debug\net8.0\TaskFlowLab.Application.dll
+C:\Users\long_\Desktop\Guia Claude Code\TaskFlowLab.Api\TaskFlowLab.Application\obj\Debug\net8.0\refint\TaskFlowLab.Application.dll
+C:\Users\long_\Desktop\Guia Claude Code\TaskFlowLab.Api\TaskFlowLab.Application\obj\Debug\net8.0\TaskFlowLab.Application.pdb
+C:\Users\long_\Desktop\Guia Claude Code\TaskFlowLab.Api\TaskFlowLab.Application\obj\Debug\net8.0\ref\TaskFlowLab.Application.dll

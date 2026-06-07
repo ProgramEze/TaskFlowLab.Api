@@ -1,0 +1,56 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v8.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v8.0": {
+      "TaskFlowLab.Infrastructure/1.0.0": {
+        "dependencies": {
+          "TaskFlowLab.Application": "1.0.0",
+          "TaskFlowLab.Domain": "1.0.0"
+        },
+        "runtime": {
+          "TaskFlowLab.Infrastructure.dll": {}
+        }
+      },
+      "TaskFlowLab.Application/1.0.0": {
+        "dependencies": {
+          "TaskFlowLab.Domain": "1.0.0"
+        },
+        "runtime": {
+          "TaskFlowLab.Application.dll": {
+            "assemblyVersion": "1.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "TaskFlowLab.Domain/1.0.0": {
+        "runtime": {
+          "TaskFlowLab.Domain.dll": {
+            "assemblyVersion": "1.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "TaskFlowLab.Infrastructure/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "TaskFlowLab.Application/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "TaskFlowLab.Domain/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

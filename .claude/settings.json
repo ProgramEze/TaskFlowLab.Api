@@ -1,0 +1,36 @@
+{
+    "permissions": {
+        // ── ALLOW: inspección y validación, sin riesgo ──────────────────
+        "allow": [
+            "Read(*)", // leer cualquier archivo del proyecto
+            "Bash(git status)", // ver estado del repositorio
+            "Bash(git diff)", // ver cambios pendientes
+            "Bash(git log --oneline)", // revisar historial reciente
+            "Bash(dotnet build)", // compilar y detectar errores
+            "Bash(dotnet test)", // ejecutar tests existentes
+            "Bash(dotnet restore)" // restaurar dependencias
+        ],
+
+        // ── ASK: acciones que cambian estado, requieren tu OK ───────────
+        "ask": [
+            "Bash(git add *)", // stagear archivos
+            "Bash(git commit *)", // confirmar cambios
+            "Bash(dotnet add *)", // agregar paquetes NuGet o referencias
+            "Bash(dotnet ef *)", // migraciones de Entity Framework
+            "Write(appsettings*.json)" // modificar configuración de la app
+        ],
+
+        // ── DENY: bloqueado siempre, sin excepciones ────────────────────
+        "deny": [
+            "Bash(rm *)", // eliminar archivos
+            "Bash(rm -rf *)", // eliminar carpetas recursivamente
+            "Read(.env)", // leer variables de entorno locales
+            "Read(.env.local)", // leer variables de entorno locales
+            "Write(.env)", // escribir en variables de entorno
+            "Write(.env.local)", // escribir en variables de entorno
+            "Read(secrets/**)", // leer secretos
+            "Write(secrets/**)", // escribir secretos
+            "Bash(git push *)" // push al remoto: siempre manual
+        ]
+    }
+}

@@ -1,13 +1,21 @@
+using TaskFlowLab.Application.Interfaces;
+using TaskFlowLab.Application.Servicios;
+using TaskFlowLab.Domain.Entities;
+using TaskFlowLab.Domain.Enums;
+using TaskFlowLab.Infrastructure.Repositorios;
+
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
-// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
+builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
+// ITareaRepositorio como Singleton: el diccionario en memoria debe sobrevivir entre requests
+builder.Services.AddSingleton<ITareaRepositorio, TareaRepositorio>();
+builder.Services.AddScoped<ITareaServicio, TareaServicio>();
+
 var app = builder.Build();
 
-// Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
@@ -15,30 +23,27 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
+app.MapControllers();
 
-var summaries = new[]
-{
-    "Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"
-};
+// Seed de datos para prueba manual
+var repositorio = app.Services.GetRequiredService<ITareaRepositorio>();
 
-app.MapGet("/weatherforecast", () =>
-{
-    var forecast =  Enumerable.Range(1, 5).Select(index =>
-        new WeatherForecast
-        (
-            DateOnly.FromDateTime(DateTime.Now.AddDays(index)),
-            Random.Shared.Next(-20, 55),
-            summaries[Random.Shared.Next(summaries.Length)]
-        ))
-        .ToArray();
-    return forecast;
-})
-.WithName("GetWeatherForecast")
-.WithOpenApi();
+await repositorio.AgregarAsync(new Tarea(
+    Guid.Parse("00000000-0000-0000-0000-000000000001"),
+    "Preparar informe mensual",
+    EstadoTarea.Pendiente,
+    DateTime.UtcNow.AddDays(-1)));  // vencida ayer → completarla debe dar 400
+
+await repositorio.AgregarAsync(new Tarea(
+    Guid.Parse("00000000-0000-0000-0000-000000000002"),
+    "Revisar código del módulo usuarios",
+    EstadoTarea.EnProgreso,
+    DateTime.UtcNow.AddDays(1)));   // vence mañana → se puede completar
+
+await repositorio.AgregarAsync(new Tarea(
+    Guid.Parse("00000000-0000-0000-0000-000000000003"),
+    "Actualizar documentación",
+    EstadoTarea.Pendiente,
+    null));                          // sin vencimiento → siempre se puede completar
 
 app.Run();
-
-record WeatherForecast(DateOnly Date, int TemperatureC, string? Summary)
-{
-    public int TemperatureF => 32 + (int)(TemperatureC / 0.5556);
-}

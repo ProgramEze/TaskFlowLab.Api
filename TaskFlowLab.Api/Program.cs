@@ -12,12 +12,16 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-// ITareaRepositorio como Singleton: el diccionario en memoria debe sobrevivir entre requests
+// Tareas
 builder.Services.AddSingleton<ITareaRepositorio, TareaRepositorio>();
 builder.Services.AddScoped<ITareaServicio, TareaServicio>();
 
 // Integracion Workspace: Null Object hasta que se configuren credenciales reales
 builder.Services.AddScoped<IServicioAutomatizacionWorkspace, NullServicioAutomatizacionWorkspace>();
+
+// Eventos de integracion: Singleton por ConcurrentDictionary en memoria
+builder.Services.AddSingleton<IRepositorioEventoIntegracion, RepositorioEventoIntegracion>();
+builder.Services.AddScoped<ServicioEventoIntegracion>();
 
 var app = builder.Build();
 

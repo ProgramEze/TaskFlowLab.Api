@@ -4,6 +4,16 @@ Errores encontrados, decisiones revisadas y cosas que conviene recordar.
 
 ---
 
+## 2026-06-08 — Moq y FluentAssertions no se incluyen automáticamente
+
+**Que paso:** El proyecto de tests compilaba bien con xUnit puro (módulo 3). Al agregar tests con mocks en el módulo 6, el build falló porque `Moq` y `FluentAssertions` no estaban en el `.csproj`.
+
+**Solución:** Agregar los paquetes explícitamente en `TaskFlowLab.Tests.csproj`.
+
+**Aprendizaje:** xUnit viene incluido en la plantilla de tests de .NET. Moq y FluentAssertions son paquetes separados que hay que agregar manualmente. Verificar el `.csproj` antes de escribir tests que usen mocks o assertions avanzadas.
+
+---
+
 ## 2026-06-08 — Skill feature-brief: la skill explora el codebase sola
 
 **Que paso:** Al invocar `/feature-brief` en Claude Code, el agente hizo 33 tool uses antes de generar el brief: exploró la estructura del proyecto, leyó entidades, repositorios y el controlador existente.

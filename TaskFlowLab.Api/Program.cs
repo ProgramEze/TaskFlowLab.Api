@@ -1,7 +1,9 @@
+using TaskFlowLab.Application.Integrations;
 using TaskFlowLab.Application.Interfaces;
 using TaskFlowLab.Application.Servicios;
 using TaskFlowLab.Domain.Entities;
 using TaskFlowLab.Domain.Enums;
+using TaskFlowLab.Infrastructure.Integrations;
 using TaskFlowLab.Infrastructure.Repositorios;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -13,6 +15,9 @@ builder.Services.AddSwaggerGen();
 // ITareaRepositorio como Singleton: el diccionario en memoria debe sobrevivir entre requests
 builder.Services.AddSingleton<ITareaRepositorio, TareaRepositorio>();
 builder.Services.AddScoped<ITareaServicio, TareaServicio>();
+
+// Integracion Workspace: Null Object hasta que se configuren credenciales reales
+builder.Services.AddScoped<IServicioAutomatizacionWorkspace, NullServicioAutomatizacionWorkspace>();
 
 var app = builder.Build();
 

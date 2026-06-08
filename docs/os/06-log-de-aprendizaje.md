@@ -4,6 +4,30 @@ Errores encontrados, decisiones revisadas y cosas que conviene recordar.
 
 ---
 
+## 2026-06-08 — Skill feature-brief: la skill explora el codebase sola
+
+**Que paso:** Al invocar `/feature-brief` en Claude Code, el agente hizo 33 tool uses antes de generar el brief: exploró la estructura del proyecto, leyó entidades, repositorios y el controlador existente.
+
+**Aprendizaje:** Una skill bien escrita no solo genera texto genérico — adapta la salida al estado real del proyecto. El brief resultante mencionó que no hay JWT todavía y propuso mecanismos provisionales acordes al código actual.
+
+---
+
+## 2026-06-08 — Parser aborted no significa error del archivo
+
+**Que paso:** Claude Code mostró "Parser aborted (timeout, resource limit, or over-length)" al intentar mostrar el contenido del brief generado en pantalla. El archivo igual se creó correctamente.
+
+**Aprendizaje:** El aviso es una limitación del display en terminal, no un error de escritura. Siempre verificar con `cat` o abriendo el archivo en el editor antes de asumir que falló.
+
+---
+
+## 2026-06-08 — Business OS: documentar decisiones antes de implementar
+
+**Que paso:** Al cerrar el brief de comentarios, quedaron 3 preguntas abiertas de diseño (identificador de usuario, mecanismo de autorización, orden del listado) que el agente no podía resolver solo.
+
+**Aprendizaje:** El valor del brief no es solo la especificación técnica — es forzar las decisiones de diseño *antes* de tocar código. Preguntas que parecen menores (¿query param o header?) afectan la firma de todos los endpoints.
+
+---
+
 ## 2026-06-07 — settings.json no acepta comentarios JavaScript
 
 **Que paso:** El archivo `.claude/settings.json` tenia comentarios estilo `//` que son invalidos en JSON estandar. Claude Code fallaba al parsear los permisos.
